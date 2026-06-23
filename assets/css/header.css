@@ -1,0 +1,10 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  & .logo {
+    margin-block: 2.75rem 2.875rem;
+    margin-inline: 6.8125rem;
+  }
+}
