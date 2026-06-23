@@ -19,6 +19,73 @@
         <h1>SORTEADOR DE NÚMEROS</h1>
       </section>
     </header>
+
+    <main>
+      <section class="want">
+        <h2>QUERO SORTEAR:</h2>
+        <p>
+          Defina o intervalo e a quantidade de números, clique em "Sortear" e
+          veja os resultados na tela. É rápido e fácil!
+        </p>
+      </section>
+
+      <form>
+        <div class="inputs">
+          <div class="input-group">
+            <label for="numbers">NÚMEROS</label>
+            <input type="number" name="numbers" id="numbers" min="1" />
+          </div>
+
+          <div class="input-group">
+            <label for="from">DE</label>
+            <input type="number" name="from" id="from" min="1" />
+          </div>
+
+          <div class="input-group">
+            <label for="to">DE</label>
+            <input type="number" name="to" id="to" min="1" />
+          </div>
+
+          <div class="toggle-container">
+            <input
+              type="checkbox"
+              name="repeat"
+              id="repeat"
+              class="toggle-input"
+              aria-label="Não repetir número"
+            />
+            <label for="repeat" class="toggle"></label>
+            <span>Não repetir número</span>
+          </div>
+
+          <button type="submit">
+            SORTEAR
+            <span></span>
+            <!-- tem um ícone de seta aqui -->
+          </button>
+        </div>
+      </form>
+
+      <section class="faq">
+        <article>
+          <!-- tem ícone aqui -->
+          <h3>Como funciona o sorteador de números?</h3>
+          <p>
+            O sorteador utiliza um algoritmo de geração aleatória para criar
+            números dentro do intervalo especificado pelo usuário.
+          </p>
+        </article>
+
+        <article>
+          <!-- tem ícone aqui -->
+          <h3>Posso escolher o intervalo dos números?</h3>
+          <p>
+            Sim, você pode definir os valores mínimo e máximo para o intervalo
+            dos números sorteados.
+          </p>
+        </article>
+      </section>
+    </main>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
