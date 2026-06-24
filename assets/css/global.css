@@ -92,6 +92,12 @@ label {
   color: var(--content-secondary);
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 span {
   font: var(--paragraph-small);
   color: var(--content-primary);
@@ -110,7 +116,7 @@ h3 {
   color: var(--content-brand);
 }
 
-h3 + p {
+.faq p {
   font: var(--paragraph-small);
   color: var(--content-secondary);
 }

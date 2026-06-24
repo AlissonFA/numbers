@@ -52,44 +52,51 @@
             <label for="to">DE</label>
             <input type="number" name="to" id="to" min="1" />
           </div>
-
-          <div class="toggle-container">
-            <input
-              type="checkbox"
-              name="repeat"
-              id="repeat"
-              class="toggle-input"
-              aria-label="Não repetir número"
-            />
-            <label for="repeat" class="toggle"></label>
-            <span>Não repetir número</span>
-          </div>
-
-          <button type="submit">
-            SORTEAR
-            <span></span>
-            <img src="./assets/icons/arrow.svg" alt="Seta para direita" />
-          </button>
         </div>
+
+        <div class="toggle-container">
+          <input
+            type="checkbox"
+            name="repeat"
+            id="repeat"
+            class="toggle-input"
+            aria-label="Não repetir número"
+          />
+          <label for="repeat" class="toggle"></label>
+          <span>Não repetir número</span>
+        </div>
+
+        <button type="submit">
+          SORTEAR
+          <span>
+            <img src="./assets/icons/arrow.svg" alt="Seta para direita" />
+          </span>
+        </button>
       </form>
 
       <section class="faq">
         <article>
           <img src="./assets/icons/person.svg" alt="Pessoa" />
-          <h3>Como funciona o sorteador de números?</h3>
-          <p>
-            O sorteador utiliza um algoritmo de geração aleatória para criar
-            números dentro do intervalo especificado pelo usuário.
-          </p>
+
+          <div class="answer">
+            <h3>Como funciona o sorteador de números?</h3>
+            <p>
+              O sorteador utiliza um algoritmo de geração aleatória para criar
+              números dentro do intervalo especificado pelo usuário.
+            </p>
+          </div>
         </article>
 
         <article>
           <img src="./assets/icons/person.svg" alt="Pessoa" />
-          <h3>Posso escolher o intervalo dos números?</h3>
-          <p>
-            Sim, você pode definir os valores mínimo e máximo para o intervalo
-            dos números sorteados.
-          </p>
+
+          <div class="answer">
+            <h3>Posso escolher o intervalo dos números?</h3>
+            <p>
+              Sim, você pode definir os valores mínimo e máximo para o intervalo
+              dos números sorteados.
+            </p>
+          </div>
         </article>
       </section>
     </main>
