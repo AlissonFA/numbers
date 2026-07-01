@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Numbers</title>
-    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto+Mono:ital,wght@0,700;1,700&family=Sora:wght@100..800&display=swap"
@@ -32,56 +32,57 @@
       <main>
         <section class="choose-screen">
           <section class="want">
-          <h2>QUERO SORTEAR:</h2>
-          <p>
-            Defina o intervalo e a quantidade de números, clique em "Sortear" e
-            veja os resultados na tela. É rápido e fácil!
-          </p>
-        </section>
+            <h2>QUERO SORTEAR:</h2>
+            <p>
+              Defina o intervalo e a quantidade de números, clique em "Sortear"
+              e veja os resultados na tela. É rápido e fácil!
+            </p>
+          </section>
 
-        <form>
-          <div class="inputs">
-            <div class="input-group">
-              <label for="numbers">NÚMEROS</label>
+          <form>
+            <div class="inputs">
+              <div class="input-group">
+                <label for="numbers">NÚMEROS</label>
+                <input
+                  type="number"
+                  name="numbers"
+                  id="numbers"
+                  min="1"
+                  max="5"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="from">DE</label>
+                <input type="number" name="from" id="from" min="1" required />
+              </div>
+
+              <div class="input-group">
+                <label for="to">DE</label>
+                <input type="number" name="to" id="to" min="1" required />
+              </div>
+            </div>
+
+            <div class="toggle-container">
               <input
-                type="number"
-                name="numbers"
-                id="numbers"
-                min="1"
-                max="5"
+                type="checkbox"
+                name="repeat"
+                id="repeat"
+                class="toggle-input"
+                aria-label="Não repetir número"
               />
+              <label for="repeat" class="toggle"></label>
+              <span>Não repetir número</span>
             </div>
 
-            <div class="input-group">
-              <label for="from">DE</label>
-              <input type="number" name="from" id="from" min="1" />
-            </div>
-
-            <div class="input-group">
-              <label for="to">DE</label>
-              <input type="number" name="to" id="to" min="1" />
-            </div>
-          </div>
-
-          <div class="toggle-container">
-            <input
-              type="checkbox"
-              name="repeat"
-              id="repeat"
-              class="toggle-input"
-              aria-label="Não repetir número"
-            />
-            <label for="repeat" class="toggle"></label>
-            <span>Não repetir número</span>
-          </div>
-
-          <button type="submit" class="button">
-            SORTEAR
-            <span>
-              <img src="./assets/icons/arrow.svg" alt="Seta para direita" />
-            </span>
-          </button>
-        </form>
+            <button type="submit" class="button">
+              SORTEAR
+              <span>
+                <img src="./assets/icons/arrow.svg" alt="Seta para direita" />
+              </span>
+            </button>
+          </form>
         </section>
 
         <section class="result-screen hidden">
@@ -89,20 +90,20 @@
           <p>1° RESULTADO</p>
 
           <div class="numbers">
-            <span class="number">
+            <!-- <span class="number">
               <span class="number-box"></span>
               <span class="number-value">32</span>
             </span>
             <span class="number">
               <span class="number-box"></span>
               <span class="number-value">75</span>
-            </span>
+            </span> -->
           </div>
 
-          <button type="button" class="button">
+          <button type="button" class="button" id="draw-again">
             SORTEAR NOVAMENTE
             <span>
-              <img src="./assets/icons/play.svg" alt="">
+              <img src="./assets/icons/play.svg" alt="" />
             </span>
           </button>
         </section>

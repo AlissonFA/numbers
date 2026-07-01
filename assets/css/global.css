@@ -120,7 +120,3 @@ h3 {
   font: var(--paragraph-small);
   color: var(--content-secondary);
 }
-
-.hidden {
-  display: none;
-}
