@@ -1,0 +1,16 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 2.25rem;
+  align-items: center;
+
+  & article {
+    display: flex;
+    align-items: start;
+    gap: 0.5rem;
+  }
+
+  & > article {
+    margin-bottom: 2.25rem;
+  }
+}

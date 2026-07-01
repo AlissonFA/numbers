@@ -1,180 +1,213 @@
-main {
-  display: flex;
-  flex-direction: column;
-  margin-inline: 2.25rem;
-  align-items: center;
+.container {
+  & main {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 2.25rem;
+    align-items: center;
 
-  & .want {
-    margin-top: 2.625rem;
-    & h2 {
-      margin-bottom: 0.125rem;
-    }
-  }
+    & .want {
+      margin-top: 2.625rem;
 
-  & form {
-    margin-top: 2.5rem;
-
-    & .inputs {
-      display: flex;
-      gap: 0.75rem;
-      margin-bottom: 1.25rem;
-
-      & .input-group {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
-        & label {
-          transition: color 0.3s;
-        }
-
-        & input {
-          width: 5.375rem;
-          height: 3.5rem;
-
-          text-align: center;
-
-          font: var(--display-small);
-          color: var(--content-primary);
-
-          background: var(--background-secondary);
-
-          border: 2px solid transparent;
-          border-radius: 0.5rem;
-
-          &:focus {
-            outline: none;
-
-            caret-color: var(--content-primary);
-          }
-
-          &:hover,
-          &:focus {
-            border: 2px solid transparent;
-
-            background:
-              linear-gradient(
-                  var(--background-secondary),
-                  var(--background-secondary)
-                )
-                padding-box,
-              var(--gradient-border) border-box;
-          }
-        }
-
-        &:has(input:is(:hover, :focus)) label {
-          color: var(--content-brand);
-        }
+      & h2 {
+        margin-bottom: 0.125rem;
       }
     }
 
-    & .toggle-container {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-
-      & .toggle-input {
-        display: none;
-
-        &:checked + .toggle {
-          background: var(--gradient-background);
-
-          &:before {
-            transform: translateX(0.625rem);
-          }
-        }
-      }
-
-      & .toggle {
-        width: 1.875rem;
-        height: 1.25rem;
-
-        display: flex;
-        align-items: center;
-
-        background: var(--content-tertiary);
-        border-radius: 1rem;
-
-        cursor: pointer;
-        padding: 0.1875rem;
-
-        &:before {
-          content: "";
-
-          width: 0.875rem;
-          height: 0.875rem;
-
-          background: var(--content-primary);
-          border-radius: 50%;
-
-          transition: transform 0.3s;
-        }
-      }
-    }
-
-    & button {
+    & form {
       margin-top: 2.5rem;
 
-      position: relative;
+      & .inputs {
+        display: flex;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
 
-      transition: background-color 0.3s;
+        & .input-group {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
 
-      border: none;
-      border-radius: 0.5rem;
+          & label {
+            transition: color 0.3s;
+          }
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+          & input {
+            width: 5.375rem;
+            height: 3.5rem;
 
-      gap: 0.5rem;
+            text-align: center;
 
-      width: 19.9375rem;
-      height: 3.5rem;
+            font: var(--display-small);
+            color: var(--content-primary);
 
-      margin-bottom: 5rem;
+            background: var(--background-secondary);
 
-      & span {
+            border: 2px solid transparent;
+            border-radius: 0.5rem;
+
+            &:focus {
+              outline: none;
+
+              caret-color: var(--content-primary);
+            }
+
+            &:hover,
+            &:focus {
+              border: 2px solid transparent;
+
+              background:
+                linear-gradient(
+                    var(--background-secondary),
+                    var(--background-secondary)
+                  )
+                  padding-box,
+                var(--gradient-border) border-box;
+            }
+          }
+
+          &:has(input:is(:hover, :focus)) label {
+            color: var(--content-brand);
+          }
+        }
+      }
+
+      & .toggle-container {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        & .toggle-input {
+          display: none;
+
+          &:checked + .toggle {
+            background: var(--gradient-background);
+
+            &:before {
+              transform: translateX(0.625rem);
+            }
+          }
+        }
+
+        & .toggle {
+          width: 1.875rem;
+          height: 1.25rem;
+
+          display: flex;
+          align-items: center;
+
+          background: var(--content-tertiary);
+          border-radius: 1rem;
+
+          cursor: pointer;
+          padding: 0.1875rem;
+
+          &:before {
+            content: "";
+
+            width: 0.875rem;
+            height: 0.875rem;
+
+            background: var(--content-primary);
+            border-radius: 50%;
+
+            transition: transform 0.3s;
+          }
+        }
+      }
+
+      & button {
+        margin-top: 2.5rem;
+
+        position: relative;
+
+        transition: background-color 0.3s;
+
+        border: none;
+        border-radius: 0.5rem;
+
         display: flex;
         align-items: center;
         justify-content: center;
-      }
 
-      &::before {
-        content: "";
+        gap: 0.5rem;
 
-        position: absolute;
-        inset: -1.6px;
+        width: 19.9375rem;
+        height: 3.5rem;
 
-        border-radius: inherit;
+        margin-bottom: 5rem;
 
-        background: var(--gradient-border);
-
-        opacity: 0;
-
-        transition: opacity 0.3s;
-
-        z-index: -1;
-      }
-
-      &:hover {
-        background: var(--background-secondary);
+        & span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
 
         &::before {
-          opacity: 1;
+          content: "";
+
+          position: absolute;
+          inset: -1.6px;
+
+          border-radius: inherit;
+
+          background: var(--gradient-border);
+
+          opacity: 0;
+
+          transition: opacity 0.3s;
+
+          z-index: -1;
+        }
+
+        &:hover {
+          background: var(--background-secondary);
+
+          &::before {
+            opacity: 1;
+          }
         }
       }
     }
   }
+}
 
-  & .faq {
-    & article {
-      display: flex;
-      align-items: start;
-      gap: 0.5rem;
+@media (width >= 80em) {
+  .container {
+    width: min(68.625rem, 100%);
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: 31.75rem 30.125rem;
+    column-gap: 6.75rem;
+
+    grid-template-areas:
+      "header main"
+      "faq main";
+
+    & header {
+      grid-area: header;
     }
 
-    & > article {
-      margin-bottom: 2.25rem;
+    & main {
+      grid-area: main;
+      align-items: flex-start;
+      margin-inline: 0;
+      margin-top: 12rem;
+
+      & .want {
+        max-width: 26rem;
+      }
+
+      & form {
+        & button {
+          width: 27rem;
+        }
+      }
+    }
+
+    & .faq {
+      grid-area: faq;
+      margin-top: 2.375rem;
+      margin-inline: 0;
     }
   }
 }
