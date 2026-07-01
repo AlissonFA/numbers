@@ -1,0 +1,62 @@
+.button {
+  position: relative;
+
+  transition: background-color 0.3s;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  width: 19.9375rem;
+  height: 3.5rem;
+
+  & span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    inset: -1.6px;
+
+    border-radius: inherit;
+
+    background: var(--gradient-border);
+
+    opacity: 0;
+
+    transition: opacity 0.3s;
+
+    z-index: -1;
+  }
+
+  &:hover {
+    background: var(--background-secondary);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.animate-number-box {
+  animation: revealBox 0.8s ease forwards;
+}
+
+.animate-number-value {
+  animation: revealNumber 0.8s ease forwards;
+}
+
+@media (width >= 80em) {
+  .button {
+    width: 30.125rem;
+  }
+}

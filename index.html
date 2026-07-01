@@ -30,7 +30,8 @@
       </header>
 
       <main>
-        <section class="want">
+        <section class="choose-screen">
+          <section class="want">
           <h2>QUERO SORTEAR:</h2>
           <p>
             Defina o intervalo e a quantidade de números, clique em "Sortear" e
@@ -74,13 +75,37 @@
             <span>Não repetir número</span>
           </div>
 
-          <button type="submit">
+          <button type="submit" class="button">
             SORTEAR
             <span>
               <img src="./assets/icons/arrow.svg" alt="Seta para direita" />
             </span>
           </button>
         </form>
+        </section>
+
+        <section class="result-screen hidden">
+          <h2>RESULTADO DO SORTEIO</h2>
+          <p>1° RESULTADO</p>
+
+          <div class="numbers">
+            <span class="number">
+              <span class="number-box"></span>
+              <span class="number-value">32</span>
+            </span>
+            <span class="number">
+              <span class="number-box"></span>
+              <span class="number-value">75</span>
+            </span>
+          </div>
+
+          <button type="button" class="button">
+            SORTEAR NOVAMENTE
+            <span>
+              <img src="./assets/icons/play.svg" alt="">
+            </span>
+          </button>
+        </section>
       </main>
 
       <section class="faq">

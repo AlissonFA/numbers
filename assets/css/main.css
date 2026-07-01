@@ -5,168 +5,236 @@
     margin-inline: 2.25rem;
     align-items: center;
 
-    & .want {
-      margin-top: 2.625rem;
+    & .choose-screen {
+      & .want {
+        margin-top: 2.625rem;
 
-      & h2 {
-        margin-bottom: 0.125rem;
+        & h2 {
+          margin-bottom: 0.125rem;
+        }
+      }
+
+      & form {
+        margin-top: 2.5rem;
+
+        & .inputs {
+          display: flex;
+          gap: 0.75rem;
+          margin-bottom: 1.25rem;
+
+          & .input-group {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            & label {
+              transition: color 0.3s;
+            }
+
+            & input {
+              width: 5.375rem;
+              height: 3.5rem;
+
+              text-align: center;
+
+              font: var(--display-small);
+              color: var(--content-primary);
+
+              background: var(--background-secondary);
+
+              border: 2px solid transparent;
+              border-radius: 0.5rem;
+
+              &:focus {
+                outline: none;
+
+                caret-color: var(--content-primary);
+              }
+
+              &:hover,
+              &:focus {
+                border: 2px solid transparent;
+
+                background:
+                  linear-gradient(
+                      var(--background-secondary),
+                      var(--background-secondary)
+                    )
+                    padding-box,
+                  var(--gradient-border) border-box;
+              }
+            }
+
+            &:has(input:is(:hover, :focus)) label {
+              color: var(--content-brand);
+            }
+          }
+        }
+
+        & .toggle-container {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          & .toggle-input {
+            display: none;
+
+            &:checked + .toggle {
+              background: var(--gradient-background);
+
+              &:before {
+                transform: translateX(0.625rem);
+              }
+            }
+          }
+
+          & .toggle {
+            width: 1.875rem;
+            height: 1.25rem;
+
+            display: flex;
+            align-items: center;
+
+            background: var(--content-tertiary);
+            border-radius: 1rem;
+
+            cursor: pointer;
+            padding: 0.1875rem;
+
+            &:before {
+              content: "";
+
+              width: 0.875rem;
+              height: 0.875rem;
+
+              background: var(--content-primary);
+              border-radius: 50%;
+
+              transition: transform 0.3s;
+            }
+          }
+        }
+
+        & .button {
+          margin-top: 2.5rem;
+          margin-bottom: 5rem;
+        }
       }
     }
 
-    & form {
-      margin-top: 2.5rem;
+    & .result-screen.active {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
 
-      & .inputs {
+      & h2 {
+        margin-bottom: 0.25rem;
+      }
+
+      & .numbers {
+        margin-top: 2.5rem;
+
         display: flex;
-        gap: 0.75rem;
-        margin-bottom: 1.25rem;
+        gap: 0.25rem;
 
-        & .input-group {
+        & .number {
+          position: relative;
+
           display: flex;
           align-items: center;
-          flex-direction: column;
+          justify-content: center;
 
-          & label {
-            transition: color 0.3s;
+          width: 6.25rem;
+          height: 6.25rem;
+
+          & .number-box {
+            position: absolute;
+            inset: 0;
+
+            border-radius: 1.75rem;
+            background: var(--content-brand);
           }
 
-          & input {
-            width: 5.375rem;
-            height: 3.5rem;
+          & .number-value {
+            position: relative;
+            z-index: 1;
 
-            text-align: center;
-
-            font: var(--display-small);
-            color: var(--content-primary);
-
-            background: var(--background-secondary);
-
-            border: 2px solid transparent;
-            border-radius: 0.5rem;
-
-            &:focus {
-              outline: none;
-
-              caret-color: var(--content-primary);
-            }
-
-            &:hover,
-            &:focus {
-              border: 2px solid transparent;
-
-              background:
-                linear-gradient(
-                    var(--background-secondary),
-                    var(--background-secondary)
-                  )
-                  padding-box,
-                var(--gradient-border) border-box;
-            }
-          }
-
-          &:has(input:is(:hover, :focus)) label {
+            font: 700 64px/150% var(--ff-roboto-mono);
             color: var(--content-brand);
           }
         }
       }
-
-      & .toggle-container {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-
-        & .toggle-input {
-          display: none;
-
-          &:checked + .toggle {
-            background: var(--gradient-background);
-
-            &:before {
-              transform: translateX(0.625rem);
-            }
-          }
-        }
-
-        & .toggle {
-          width: 1.875rem;
-          height: 1.25rem;
-
-          display: flex;
-          align-items: center;
-
-          background: var(--content-tertiary);
-          border-radius: 1rem;
-
-          cursor: pointer;
-          padding: 0.1875rem;
-
-          &:before {
-            content: "";
-
-            width: 0.875rem;
-            height: 0.875rem;
-
-            background: var(--content-primary);
-            border-radius: 50%;
-
-            transition: transform 0.3s;
-          }
-        }
-      }
-
-      & button {
-        margin-top: 2.5rem;
-
-        position: relative;
-
-        transition: background-color 0.3s;
-
-        border: none;
-        border-radius: 0.5rem;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        gap: 0.5rem;
-
-        width: 19.9375rem;
-        height: 3.5rem;
-
-        margin-bottom: 5rem;
-
-        & span {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        &::before {
-          content: "";
-
-          position: absolute;
-          inset: -1.6px;
-
-          border-radius: inherit;
-
-          background: var(--gradient-border);
-
-          opacity: 0;
-
-          transition: opacity 0.3s;
-
-          z-index: -1;
-        }
-
-        &:hover {
-          background: var(--background-secondary);
-
-          &::before {
-            opacity: 1;
-          }
-        }
-      }
     }
+  }
+}
+
+@keyframes revealBox {
+  0% {
+    background: var(--color-inverse);
+    transform: rotate(0deg);
+  }
+
+  8.33% {
+    background: var(--content-brand);
+  }
+
+  16.66% {
+    transform: rotate(18deg);
+  }
+
+  25% {
+    transform: rotate(36deg);
+  }
+
+  33.33% {
+    transform: rotate(54deg);
+  }
+
+  41.66% {
+    transform: rotate(72deg);
+  }
+
+  50% {
+    transform: rotate(90deg);
+  }
+
+  58.33% {
+    transform: rotate(108deg);
+  }
+
+  66.66% {
+    transform: rotate(126deg);
+  }
+
+  75% {
+    transform: rotate(144deg);
+  }
+
+  83.33% {
+    transform: rotate(162deg);
+  }
+
+  91.66% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+    background: var(--color-inverse);
+  }
+}
+
+@keyframes revealNumber {
+  0%, 33.33% {
+    color: transparent;
+  }
+
+  41.66%, 91.66% {
+    color: var(--color-inverse);
+  }
+
+  100% {
+    color: var(--content-brand);
   }
 }
 
@@ -193,21 +261,21 @@
       margin-inline: 0;
       margin-top: 12rem;
 
-      & .want {
-        max-width: 26rem;
-      }
+      & .choose-screen {
+        & .want {
+          max-width: 30.125rem;
 
-      & form {
-        & button {
-          width: 27rem;
+          & h2 + p {
+            font: var(--paragraph-large);
+          }
         }
       }
-    }
 
-    & .faq {
-      grid-area: faq;
-      margin-top: 2.375rem;
-      margin-inline: 0;
+      & .faq {
+        grid-area: faq;
+        margin-top: 2.375rem;
+        margin-inline: 0;
+      }
     }
   }
 }
