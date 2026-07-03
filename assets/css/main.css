@@ -123,7 +123,7 @@
     }
 
     & .result-screen {
-      margin-top: 4.375rem;  
+      margin-top: 4.375rem;
 
       display: flex;
       align-items: center;
@@ -173,6 +173,12 @@
       & .button {
         margin-top: 2.5rem;
         margin-bottom: 4.375rem;
+
+        &:hover {
+          & span img {
+            animation: hoverAgain 1.5s linear forwards;
+          }
+        }
       }
     }
 
@@ -239,16 +245,40 @@
 }
 
 @keyframes revealNumber {
-  0%, 33.33% {
+  0%,
+  33.33% {
     color: transparent;
   }
 
-  41.66%, 91.66% {
+  41.66%,
+  91.66% {
     color: var(--color-inverse);
   }
 
   100% {
     color: var(--content-brand);
+  }
+}
+
+@keyframes hoverAgain {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(30deg);
+  }
+
+  40% {
+    transform: rotate(90deg);
+  }
+
+  60% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
