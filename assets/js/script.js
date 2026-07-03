@@ -84,9 +84,12 @@ function showResult(raffledNumbers) {
   }
 
   // Mostra o botão após o último número.
-  setTimeout(() => {
-    drawAgain.classList.remove("hidden");
-  }, raffledNumbers.length * ANIMATION_TIME + ANIMATION_TIME);
+  setTimeout(
+    () => {
+      drawAgain.classList.remove("hidden");
+    },
+    raffledNumbers.length * ANIMATION_TIME + ANIMATION_TIME,
+  );
 }
 
 function createNumber(numberValue) {
